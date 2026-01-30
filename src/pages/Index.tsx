@@ -38,31 +38,23 @@ export default function Index() {
 
         <div className="container relative py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl mx-auto text-center">
-            <a
-              href="https://openclaw.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-secondary border border-border mb-6 animate-fade-in hover:border-primary/50 transition-colors"
-            >
-              <img src="/openclaw-logo.svg" alt="OpenClaw" className="h-6 w-6" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in">
+              <Bot className="h-4 w-4 text-primary" />
               <span className="text-sm text-muted-foreground">
                 Propulsé par OpenClaw
               </span>
-            </a>
-
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in">
-              <span>10 €/mois par instance</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              Une IA connectée à vos API{" "}
-              <span className="text-gradient">pour chacun de vos clients</span>
+              Une IA dédiée par client,{" "}
+              <span className="text-gradient">en un appel API</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Déployez des CloudBots sur des VMs sans héberger l'IA. Vos clients
               parlent à leur IA via Telegram, Slack ou WhatsApp ; l'IA appelle
-              votre API, authentifiée avec leurs clés.</p>
+              votre API, authentifiée avec leurs clés.
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <Link to="/signup">
