@@ -40,13 +40,13 @@ export default function Index() {
 
         <div className="container relative py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in">
-              <Bot className="h-4 w-4 text-primary" />
-              <span className="text-sm text-muted-foreground">
-                Propulsé par OpenClaw
-              </span>
-            </div>
-
+            <img
+              src="/logo.png"
+              alt=""
+              className="mx-auto mb-6 h-16 w-16 md:h-20 md:w-20 object-contain animate-fade-in"
+              width={80}
+              height={80}
+            />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
               Déployez un assistant IA à chacun de vos clients et{" "}
               <span className="text-gradient">connectez les à vos APIs.</span>
@@ -67,6 +67,25 @@ export default function Index() {
                 <Link to="/documentation">Voir la doc API</Link>
               </Button>
             </div>
+
+            <a
+              href="https://openclaw.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mt-10 animate-fade-in hover:bg-secondary/80 transition-colors"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <img
+                src="/openclaw.svg"
+                alt="OpenClaw"
+                className="h-5 w-5 shrink-0"
+                width={20}
+                height={20}
+              />
+              <span className="text-sm text-muted-foreground">
+                Propulsé par OpenClaw
+              </span>
+            </a>
           </div>
         </div>
         {/* Decorative grid */}

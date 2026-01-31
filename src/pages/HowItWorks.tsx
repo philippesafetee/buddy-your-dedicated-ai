@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { StepCard } from "@/components/ui/step-card";
+import { WaitlistModal } from "@/components/WaitlistModal";
 import { ArrowRight } from "lucide-react";
 
 const steps = [
@@ -20,7 +20,7 @@ const steps = [
     number: 3,
     title: "Buddy provisionne la VM et déploie OpenClaw",
     description:
-      "Nous déployons OpenClaw (OpenClaw) sur une machine virtuelle avec votre configuration. L'IA est prête à discuter avec votre client et à appeler votre API.",
+      "Nous déployons OpenClaw sur une machine virtuelle sécurisée avec votre configuration. L'assistant est prêt à discuter avec votre client et à appeler votre API.",
   },
   {
     number: 4,
@@ -85,14 +85,14 @@ export default function HowItWorks() {
               Prêt à lancer votre première instance ?
             </h2>
             <p className="text-muted-foreground mb-10">
-              Créez un compte et accédez au dashboard pour commencer.
+              Inscrivez-vous sur la liste d'attente pour être parmi les premiers à accéder à Buddy.
             </p>
-            <Link to="/signup">
+            <WaitlistModal>
               <Button size="lg" className="glow-primary text-base px-8">
-                Créer un compte
+                S'inscrire sur la liste d'attente
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </Link>
+            </WaitlistModal>
           </div>
         </div>
       </section>
