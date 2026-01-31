@@ -7,22 +7,22 @@ import { WaitlistModal } from "@/components/WaitlistModal";
 
 const features = [
   {
+    icon: Shield,
+    title: "Un assistant IA par client",
+    description:
+      "Chaque client a son assistant IA dédié sur une instance séparée. Vous isolez les périmètres et la sécurité : un client, une VM, un assistant.",
+  },
+  {
     icon: Server,
     title: "Vous ne payez que l'infrastructure",
     description:
-      "La consommation IA est assumée par vos clients ou par vous. Buddy facture uniquement la VM et la plateforme. Pas d'hébergement IA, pas de surprise sur la facture.",
-  },
-  {
-    icon: Shield,
-    title: "Un OpenClaw par client",
-    description:
-      "Chaque client a son IA dédiée sur une instance séparée. Vous isolez les périmètres et la sécurité : un client, une VM, une IA.",
+      "La consommation IA peut être assumée par vos clients ou par vous. Buddy facture uniquement l'hébergement de l'assistant.",
   },
   {
     icon: Key,
-    title: "Votre API, authentifiée avec les clés de votre client",
+    title: "Vos APIs, authentifiée avec les clés du client",
     description:
-      "L'IA déployée appelle votre API métier avec les informations d'authentification du client préconfigurées. Une IA qui consomme votre API, mais authentifiée avec les clés de votre client.",
+      "L'assistant déployé appelle vos APIs métier avec les informations d'authentification du client préconfigurées. Les données de vos clients sont séparées, la sécurité est assurée."
   },
 ];
 
@@ -47,12 +47,12 @@ export default function Index() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              Déployez une IA dédiée à chacun de vos clients,{" "}
-              <span className="text-gradient">connectée à vos API.</span>
+              Déployez un assistant IA à chacun de vos clients et{" "}
+              <span className="text-gradient">connectez les à vos APIs.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              Offrez à vos clients une IA dédiée, autonome et sécurisée, accessible directement depuis Telegram, Slack ou WhatsApp. En s'appuyant sur vos API, elle automatise les usages, facilite l'accès à votre service et augmente la valeur délivrée à vos clients.
+              Offrez à vos clients un assistant IA dédiée et connecté à vos APIs. Autonome et sécurisée, votre client converse avec lui depuis Telegram, Slack, WhatsApp. L'assitant automatise les usages, facilite l'accès à votre service et augmente la valeur délivrée à vos clients.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
@@ -74,8 +74,8 @@ export default function Index() {
 
       {/* Integration Preview */}
       <section className="py-24 md:py-32 bg-secondary/30">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container max-w-6xl">
+          <div className="grid gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-6">
                 <Zap className="h-3 w-3" />
@@ -86,8 +86,8 @@ export default function Index() {
               </h2>
               <p className="text-muted-foreground mb-8">
                 Telegram, Slack, WhatsApp, Signal, iMessage, Teams — vos clients interagissent avec leur
-                IA sur la plateforme de leur choix. L'IA est déjà configurée
-                pour appeler votre API avec les bons identifiants.
+                assistant sur la plateforme de leur choix. L'assistant est pré-configuré
+                pour appeler vos APIs avec les bons identifiants.
               </p>
               <div className="flex flex-wrap gap-3">
                 {[
@@ -123,7 +123,7 @@ export default function Index() {
                     </div>
                     <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
                       <p className="text-sm text-foreground">
-                        📩 Vous avez reçu un email de <span className="font-medium">Dupont Industries</span> avec une demande de commande. Comment souhaitez-vous que je procède ?
+                        📩 Vous avez reçu un email de <span className="font-medium">Dupont Industries</span> avec une commande. Comment souhaitez-vous que je procède ?
                       </p>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export default function Index() {
                     </div>
                     <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
                       <p className="text-sm text-foreground">
-                        ✅ Commande de 1 200 € HT créée pour Dupont Industries. Validez-la ici : <span className="text-primary underline">myb2b.io/orders/1234</span>
+                        ✅ Commande #4521 de 1 200 € HT créée pour Dupont Industries. Validez-la ici : <span className="text-primary underline">myb2b.io/orders/4521.</span> Je peux la valider pour vous si vous le désirez.
                       </p>
                     </div>
                   </div>
@@ -150,20 +150,27 @@ export default function Index() {
               {/* Deuxième exemple */}
               <div className="relative rounded-2xl bg-gradient-card border border-border p-6 md:p-8">
                 <div className="space-y-4">
+                  <div className="flex items-start gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg rounded-tr-none p-3">
+                      <p className="text-sm text-foreground">
+                        Peux-tu vérifier le statut de la commande de Dupont ?
+                      </p>
+                    </div>
+                  </div>
                   <div className="flex items-start gap-3">
                     <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                       <Bot className="h-4 w-4 text-primary" />
                     </div>
                     <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
                       <p className="text-sm text-foreground">
-                        Bonjour ! Je suis votre assistant IA dédié. Comment puis-je vous aider aujourd'hui ?
+                        Je vérifie cela pour vous... La commande #4521 a été expédiée hier et arrivera demain. 📦
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 justify-end">
                     <div className="bg-primary/10 rounded-lg rounded-tr-none p-3">
                       <p className="text-sm text-foreground">
-                        Peux-tu vérifier le statut de ma dernière commande ?
+                        Valide la facture et envoie lui.
                       </p>
                     </div>
                   </div>
@@ -173,7 +180,7 @@ export default function Index() {
                     </div>
                     <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
                       <p className="text-sm text-foreground">
-                        Je vérifie cela pour vous... Votre commande #4521 a été expédiée hier et arrivera demain. 📦
+                        C'est fait.
                       </p>
                     </div>
                   </div>
