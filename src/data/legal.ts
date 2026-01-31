@@ -24,12 +24,13 @@ export interface PublicationDirector {
 
 export const publisher: Publisher = {
   name: "Safetee",
-  legalForm: "SAS",
-  capital: "À compléter depuis safetee.io",
-  rcs: "À compléter depuis safetee.io",
-  siret: "À compléter depuis safetee.io",
-  vatNumber: "À compléter depuis safetee.io",
-  registeredOffice: "À compléter depuis safetee.io",
+  legalForm: "société par actions simplifiée",
+  capital: "100 000 euros",
+  rcs: "941301871, Paris",
+  siret: "94130187100013",
+  vatNumber: "FR12941301871",
+  registeredOffice:
+    "144 Avenue Charles De Gaulles, 92200 Neuilly-Sur-Seine, France",
 };
 
 export const host: Host = {
@@ -38,7 +39,7 @@ export const host: Host = {
 };
 
 export const publicationDirector: PublicationDirector = {
-  name: "À compléter depuis safetee.io",
+  name: "Philippe Bridant",
 };
 
 export const siteName = "Buddy";
