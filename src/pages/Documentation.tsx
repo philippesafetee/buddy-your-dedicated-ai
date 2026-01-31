@@ -24,7 +24,7 @@ export default function Documentation() {
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               API REST pour gérer vos instances OpenClaw, vos spécifications OpenAPI, 
-              et l'authentification. Base URL: <code className="px-2 py-0.5 bg-secondary rounded text-primary">https://api.buddy.example/v1</code>
+              et l'authentification. Base URL: <code className="px-2 py-0.5 bg-secondary rounded text-primary">https://api.ai-buddy.co/v1</code>
             </p>
             <div className="flex flex-wrap gap-4">
               <WaitlistModal>

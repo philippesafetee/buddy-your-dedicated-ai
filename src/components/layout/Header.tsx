@@ -5,6 +5,7 @@ import { useState } from "react";
 import { WaitlistModal } from "@/components/WaitlistModal";
 
 const navLinks = [
+  { href: "/", label: "Accueil" },
   { href: "/fonctionnement", label: "Fonctionnement" },
   { href: "/tarification", label: "Tarification" },
   { href: "/documentation", label: "API" },

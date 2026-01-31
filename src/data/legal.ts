@@ -1,6 +1,5 @@
 /**
- * Legal and company information (same publisher/host as safetee.io).
- * Update these values to match the legal notices on www.safetee.io.
+ * Legal and company information (publisher and host).
  */
 
 export interface Publisher {
@@ -34,8 +33,8 @@ export const publisher: Publisher = {
 };
 
 export const host: Host = {
-  name: "Même hébergeur que safetee.io",
-  address: "À compléter depuis safetee.io",
+  name: publisher.name,
+  address: publisher.registeredOffice,
 };
 
 export const publicationDirector: PublicationDirector = {

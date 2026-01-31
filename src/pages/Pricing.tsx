@@ -89,7 +89,7 @@ export default function Pricing() {
 
                 <Link to="/signup" className="block">
                   <Button size="lg" className="w-full glow-primary">
-                    Créer un compte
+                    S'inscrire sur la liste d'attente
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>

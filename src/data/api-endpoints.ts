@@ -1,6 +1,6 @@
 import type { Language } from "@/components/api-docs/LanguageSelector";
 
-const BASE_URL = "https://api.buddy.example/v1";
+const BASE_URL = "https://api.ai-buddy.co/v1";
 
 export interface Endpoint {
   id: string;
