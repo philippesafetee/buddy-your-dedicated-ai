@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import {
   publisher,
   host,
-  publicationDirector,
   siteName,
 } from "@/data/legal";
 
@@ -30,18 +29,8 @@ export default function LegalNotice() {
                   1. Éditeur du site
                 </h2>
                 <p>
-                  Le site {siteName} est édité par la société {publisher.name},{" "}
-                  {publisher.legalForm}
-                  {publisher.capital ? `, au capital de ${publisher.capital}` : ""}.
+                  Le site {siteName} est édité par {publisher.name}.
                 </p>
-                <ul className="list-none space-y-1 mt-4">
-                  <li>RCS : {publisher.rcs}</li>
-                  <li>SIRET : {publisher.siret}</li>
-                  {publisher.vatNumber && (
-                    <li>Numéro de TVA : {publisher.vatNumber}</li>
-                  )}
-                  <li>Siège social : {publisher.registeredOffice}</li>
-                </ul>
               </section>
 
               <section>
@@ -49,28 +38,13 @@ export default function LegalNotice() {
                   2. Hébergeur
                 </h2>
                 <p>
-                  Le site {siteName} est hébergé par :
-                </p>
-                <p className="mt-2">
-                  <strong>{host.name}</strong>
-                  <br />
-                  {host.address}
+                  Le site {siteName} est hébergé par {host.name}.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-xl font-semibold text-foreground mt-10 mb-4">
-                  3. Directeur de la publication
-                </h2>
-                <p>
-                  Le directeur de la publication du site est :{" "}
-                  {publicationDirector.name}.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-xl font-semibold text-foreground mt-10 mb-4">
-                  4. Propriété intellectuelle
+                  3. Propriété intellectuelle
                 </h2>
                 <p>
                   L'ensemble du contenu du site {siteName} (textes, graphismes,
@@ -91,7 +65,7 @@ export default function LegalNotice() {
 
               <section>
                 <h2 className="text-xl font-semibold text-foreground mt-10 mb-4">
-                  5. Données personnelles
+                  4. Données personnelles
                 </h2>
                 <p>
                   Les données personnelles collectées sur le site {siteName} sont
@@ -113,7 +87,7 @@ export default function LegalNotice() {
 
               <section>
                 <h2 className="text-xl font-semibold text-foreground mt-10 mb-4">
-                  6. Cookies
+                  5. Cookies
                 </h2>
                 <p>
                   Le site {siteName} peut être amené à utiliser des cookies ou
@@ -126,7 +100,7 @@ export default function LegalNotice() {
 
               <section>
                 <h2 className="text-xl font-semibold text-foreground mt-10 mb-4">
-                  7. Limitation de responsabilité
+                  6. Limitation de responsabilité
                 </h2>
                 <p>
                   {publisher.name} s'efforce d'assurer l'exactitude et la mise à
@@ -144,7 +118,7 @@ export default function LegalNotice() {
 
               <section>
                 <h2 className="text-xl font-semibold text-foreground mt-10 mb-4">
-                  8. Droit applicable et juridiction compétente
+                  7. Droit applicable et juridiction compétente
                 </h2>
                 <p>
                   Les présentes mentions légales sont régies par le droit
