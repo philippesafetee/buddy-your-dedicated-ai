@@ -20,7 +20,7 @@ const steps = [
     number: 3,
     title: "Buddy provisionne la VM et déploie OpenClaw",
     description:
-      "Nous déployons OpenClaw (CloudBot) sur une machine virtuelle avec votre configuration. L'IA est prête à discuter avec votre client et à appeler votre API.",
+      "Nous déployons OpenClaw (OpenClaw) sur une machine virtuelle avec votre configuration. L'IA est prête à discuter avec votre client et à appeler votre API.",
   },
   {
     number: 4,

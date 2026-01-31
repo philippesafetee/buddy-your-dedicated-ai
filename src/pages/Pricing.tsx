@@ -11,7 +11,7 @@ import {
 
 const included = [
   "VM dédiée",
-  "Déploiement OpenClaw (CloudBot)",
+  "Déploiement OpenClaw (OpenClaw)",
   "Skill Buddy (connexion à vos API avec auth client)",
   "Canaux Telegram, Slack, WhatsApp",
 ];
@@ -65,7 +65,7 @@ export default function Pricing() {
               <div className="relative">
                 <div className="text-center mb-8">
                   <p className="text-sm text-primary font-medium mb-2">
-                    Instance CloudBot
+                    Instance OpenClaw
                   </p>
                   <div className="flex items-baseline justify-center gap-1">
                     <span className="text-5xl md:text-6xl font-bold text-foreground">

@@ -13,7 +13,7 @@ const features = [
   },
   {
     icon: Shield,
-    title: "Un CloudBot par client",
+    title: "Un OpenClaw par client",
     description:
       "Chaque client a son IA dédiée sur une instance séparée. Vous isolez les périmètres et la sécurité : un client, une VM, une IA.",
   },
@@ -46,14 +46,14 @@ export default function Index() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              Une IA dédiée par client,{" "}
+              Une IA dédiée pour chacun de vos clients, connectée à votre API,{" "}
               <span className="text-gradient">en un appel API</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              Déployez des CloudBots sur des VMs sans héberger l'IA. Vos clients
-              parlent à leur IA via Telegram, Slack ou WhatsApp ; l'IA appelle
-              votre API, authentifiée avec leurs clés.
+              Augmenter votre service en déployant une IA sécurisée et autonome pour chacun de vos clients.
+              Vos clients parlent à leur IA via Telegram, Slack ou WhatsApp ; l'IA appelle votre API, authentifiée avec leurs clés.
+              Pas d'hébergement IA, pas de surprise sur la facture.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
