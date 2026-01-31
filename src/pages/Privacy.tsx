@@ -105,9 +105,15 @@ export default function Privacy() {
                 <p>
                   Les données peuvent être communiquées aux prestataires
                   techniques intervenant pour le compte de {publisher.name}
-                  (hébergement, outils d'analyse, etc.), dans le cadre strict de
-                  leurs missions et sous contrat garantissant la confidentialité
-                  et la sécurité des données.
+                  (hébergement, outils d'analyse, publicité, etc.), dans le cadre
+                  strict de leurs missions et sous contrat garantissant la
+                  confidentialité et la sécurité des données. Nous recourons
+                  notamment à <strong>Google (Google Ireland Limited / Google
+                  LLC)</strong> pour les services Google Analytics 4 et Google
+                  Ads (mesure d'audience, campagnes publicitaires, remarketing,
+                  suivi des conversions). Les traitements effectués par Google
+                  sont régis par leurs conditions d'utilisation et leur politique
+                  de confidentialité.
                 </p>
                 <p className="mt-4">
                   Aucun transfert de données en dehors de l'Union européenne
@@ -118,7 +124,7 @@ export default function Privacy() {
 
               <section>
                 <h2 className="text-xl font-semibold text-foreground mt-10 mb-4">
-                  6. Cookies
+                  6. Cookies et outils de mesure / publicité
                 </h2>
                 <p>
                   Le site {siteName} peut utiliser des cookies ou technologies
@@ -127,6 +133,34 @@ export default function Privacy() {
                   pouvez configurer votre navigateur pour refuser les cookies ou
                   être informé de leur dépôt ; certaines fonctionnalités du site
                   peuvent en être affectées.
+                </p>
+                <p className="mt-4">
+                  Nous utilisons notamment les services suivants, qui peuvent déposer
+                  des cookies ou des identifiants similaires :
+                </p>
+                <ul className="list-disc pl-6 mt-4 space-y-2">
+                  <li>
+                    <strong>Google Analytics 4 (GA4)</strong> : mesure d'audience,
+                    analyse du comportement des visiteurs et des conversions (ex.
+                    inscription à la liste d'attente). Les données sont traitées
+                    conformément à la politique de confidentialité de Google.
+                  </li>
+                  <li>
+                    <strong>Google Ads</strong> : diffusion de publicités ciblées
+                    (recherche, display), remarketing et mesure des conversions
+                    liées à nos campagnes. Les données peuvent être partagées avec
+                    Google pour l'optimisation des annonces et la mesure de
+                    performance.
+                  </li>
+                </ul>
+                <p className="mt-4">
+                  Ces cookies ou identifiants sont utilisés pour la mesure
+                  d'audience, l'optimisation de nos campagnes publicitaires et le
+                  suivi des conversions (ex. inscription à la waitlist). Conformément
+                  au RGPD et à la loi « Informatique et Libertés », vous pouvez
+                  refuser ou gérer ces cookies via les paramètres de votre
+                  navigateur ou via un bandeau de consentement lorsque celui-ci
+                  est proposé sur le site.
                 </p>
               </section>
 

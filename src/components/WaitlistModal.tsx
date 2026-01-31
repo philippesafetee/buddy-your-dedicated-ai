@@ -35,9 +35,23 @@ export function WaitlistModal({ children }: WaitlistModalProps) {
           throw error;
         }
       } else {
-        toast.success("Merci ! Vous êtes inscrit sur la liste d'attente.");
-        setOpen(false);
-        setFormData({ email: "", company_name: "" });
+        const runSuccess = () => {
+          toast.success("Merci ! Vous êtes inscrit sur la liste d'attente.");
+          setOpen(false);
+          setFormData({ email: "", company_name: "" });
+        };
+        window.gtag?.("event", "generate_lead", {
+          method: "waitlist",
+        });
+        // Google Ads conversion: send event then run success UI in callback (or after 2s timeout)
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "conversion_event_submit_lead_form", {
+            event_callback: runSuccess,
+            event_timeout: 2000,
+          });
+        } else {
+          runSuccess();
+        }
       }
     } catch (error) {
       console.error("Error:", error);
