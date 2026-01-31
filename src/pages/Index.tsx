@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { FeatureCard } from "@/components/ui/feature-card";
 import { Server, Shield, Key, ArrowRight, Zap, MessageSquare, Bot } from "lucide-react";
+import { WaitlistModal } from "@/components/WaitlistModal";
 
 const features = [
   {
@@ -57,13 +58,13 @@ export default function Index() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <Link to="/signup">
+              <WaitlistModal>
                 <Button size="lg" className="w-full sm:w-auto glow-primary text-base px-8">
-                  Créer un compte
+                  S'inscrire sur la liste d'attente
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-              </Link>
-              <Link to="/fonctionnement">
+              </WaitlistModal>
+              <Link to="/documentation">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto text-base px-8">
                   Voir la doc API
                 </Button>
@@ -71,7 +72,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-
         {/* Decorative grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,black,transparent)]" />
       </section>
@@ -183,15 +183,14 @@ export default function Index() {
               Prêt à déployer ?
             </h2>
             <p className="text-muted-foreground mb-10">
-              Créez un compte en quelques clics. Accédez au dashboard et à l'API
-              pour lancer votre première instance.
+              Inscrivez-vous sur la liste d'attente pour être parmi les premiers à accéder à Buddy.
             </p>
-            <Link to="/signup">
+            <WaitlistModal>
               <Button size="lg" className="glow-primary text-base px-8">
-                Créer un compte
+                S'inscrire sur la liste d'attente
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </Link>
+            </WaitlistModal>
           </div>
         </div>
       </section>

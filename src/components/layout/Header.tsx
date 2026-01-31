@@ -2,10 +2,12 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { WaitlistModal } from "@/components/WaitlistModal";
 
 const navLinks = [
   { href: "/fonctionnement", label: "Fonctionnement" },
   { href: "/tarification", label: "Tarification" },
+  { href: "/documentation", label: "API" },
   { href: "/a-propos", label: "À propos" },
 ];
 
@@ -41,16 +43,11 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <Link to="/login">
-            <Button variant="ghost" size="sm">
-              Connexion
-            </Button>
-          </Link>
-          <Link to="/signup">
+          <WaitlistModal>
             <Button size="sm" className="glow-soft">
-              Créer un compte
+              S'inscrire sur la liste d'attente
             </Button>
-          </Link>
+          </WaitlistModal>
         </div>
 
         {/* Mobile Menu Button */}
@@ -84,15 +81,10 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <div className="flex flex-col gap-2 pt-4 border-t border-border">
-              <Link to="/login" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="ghost" className="w-full justify-start">
-                  Connexion
-                </Button>
-              </Link>
-              <Link to="/signup" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full">Créer un compte</Button>
-              </Link>
+            <div className="pt-4 border-t border-border">
+              <WaitlistModal>
+                <Button className="w-full">S'inscrire sur la liste d'attente</Button>
+              </WaitlistModal>
             </div>
           </nav>
         </div>
