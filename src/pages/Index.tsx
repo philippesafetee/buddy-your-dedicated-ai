@@ -52,8 +52,7 @@ export default function Index() {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Augmentez la valeur apportée à vos clients en leur déployant une IA dédiée, sécurisée et autonome.
-            Vos clients interagissent avec leur IA via Telegram, Slack ou WhatsApp ; celle-ci appelle votre API en s’authentifiant avec leurs propres clés.
+              Offrez à vos clients une IA dédiée, autonome et sécurisée, accessible directement depuis Telegram, Slack ou WhatsApp. En s'appuyant sur vos API, elle automatise les usages, facilite l'accès à votre service et augmente la valeur délivrée à vos clients.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
