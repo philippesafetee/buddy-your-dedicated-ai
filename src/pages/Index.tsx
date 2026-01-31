@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { FeatureCard } from "@/components/ui/feature-card";
+import { BuddyHubSection } from "@/components/home/BuddyHubSection";
 import { Server, Shield, Key, ArrowRight, Zap, MessageSquare, Bot, Send, Hash, Phone, MessageCircle, Smartphone, Users } from "lucide-react";
 import { WaitlistModal } from "@/components/WaitlistModal";
 
@@ -190,6 +191,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Buddy Hub Section */}
+      <BuddyHubSection />
 
       {/* Features Section */}
       <section className="py-24 md:py-32">
