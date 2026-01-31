@@ -47,14 +47,13 @@ export default function Index() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              Une IA dédiée pour chacun de vos clients, connectée à votre API,{" "}
-              <span className="text-gradient">en un appel API</span>
+              Déployez une IA dédiée pour chacun de vos clients,{" "}
+              <span className="text-gradient">connectée à vos API</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              Augmenter votre service en déployant une IA sécurisée et autonome pour chacun de vos clients.
-              Vos clients parlent à leur IA via Telegram, Slack ou WhatsApp ; l'IA appelle votre API, authentifiée avec leurs clés.
-              Pas d'hébergement IA, pas de surprise sur la facture.
+            Augmentez la valeur apportée à vos clients en leur déployant une IA dédiée, sécurisée et autonome.
+            Vos clients interagissent avec leur IA via Telegram, Slack ou WhatsApp ; celle-ci appelle votre API en s’authentifiant avec leurs propres clés.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
@@ -64,43 +63,14 @@ export default function Index() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </WaitlistModal>
-              <Link to="/documentation">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto text-base px-8">
-                  Voir la doc API
-                </Button>
-              </Link>
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto text-base px-8">
+                <Link to="/documentation">Voir la doc API</Link>
+              </Button>
             </div>
           </div>
         </div>
         {/* Decorative grid */}
         <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(34,211,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,black,transparent)]" />
-      </section>
-
-      {/* Features Section */}
-      <section className="py-24 md:py-32">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Pourquoi Buddy ?
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Une solution simple pour déployer des assistants IA dédiés à chacun
-              de vos clients.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <FeatureCard {...feature} />
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Integration Preview */}
@@ -171,6 +141,33 @@ export default function Index() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 md:py-32">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Pourquoi Buddy ?
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Une solution simple pour déployer des assistants IA dédiés à chacun
+              de vos clients.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <div
+                key={feature.title}
+                className="animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <FeatureCard {...feature} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
