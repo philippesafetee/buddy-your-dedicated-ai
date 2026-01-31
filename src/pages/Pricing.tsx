@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
+import { WaitlistModal } from "@/components/WaitlistModal";
 import { Check, ArrowRight } from "lucide-react";
 import {
   Accordion,
@@ -87,12 +87,12 @@ export default function Pricing() {
                   ))}
                 </div>
 
-                <Link to="/signup" className="block">
+                <WaitlistModal>
                   <Button size="lg" className="w-full glow-primary">
                     S'inscrire sur la liste d'attente
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </Link>
+                </WaitlistModal>
               </div>
             </div>
           </div>
