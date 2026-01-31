@@ -7,8 +7,7 @@ import Index from "./pages/Index";
 import HowItWorks from "./pages/HowItWorks";
 import Pricing from "./pages/Pricing";
 import About from "./pages/About";
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
+import Documentation from "./pages/Documentation";
 import LegalNotice from "./pages/LegalNotice";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
@@ -27,8 +26,7 @@ const App = () => (
           <Route path="/fonctionnement" element={<HowItWorks />} />
           <Route path="/tarification" element={<Pricing />} />
           <Route path="/a-propos" element={<About />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/documentation" element={<Documentation />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/cgu" element={<Terms />} />
           <Route path="/confidentialite" element={<Privacy />} />
