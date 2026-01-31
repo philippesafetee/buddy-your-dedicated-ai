@@ -104,8 +104,43 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative space-y-6">
               <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-2xl" />
+              
+              {/* Premier exemple */}
+              <div className="relative rounded-2xl bg-gradient-card border border-border p-6 md:p-8">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                      <Bot className="h-4 w-4 text-primary" />
+                    </div>
+                    <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
+                      <p className="text-sm text-foreground">
+                        Bonjour ! Je suis votre assistant IA dédié. Comment puis-je vous aider aujourd'hui ?
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg rounded-tr-none p-3">
+                      <p className="text-sm text-foreground">
+                        Peux-tu vérifier le statut de ma dernière commande ?
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                      <Bot className="h-4 w-4 text-primary" />
+                    </div>
+                    <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
+                      <p className="text-sm text-foreground">
+                        Je vérifie cela pour vous... Votre commande #4521 a été expédiée hier et arrivera demain. 📦
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Deuxième exemple */}
               <div className="relative rounded-2xl bg-gradient-card border border-border p-6 md:p-8">
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
