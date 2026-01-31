@@ -16,6 +16,13 @@ const included = [
   "Canaux Telegram, Slack, WhatsApp",
 ];
 
+const tiers = [
+  { range: "1 à 10 instances", price: "15 €", unit: "/mois/instance" },
+  { range: "11 à 100 instances", price: "12 €", unit: "/mois/instance" },
+  { range: "101 à 500 instances", price: "10 €", unit: "/mois/instance" },
+  { range: "500+ instances", price: null, label: "Nous contacter" },
+];
+
 const faqs = [
   {
     question: "Qui paie la consommation IA ?",
@@ -59,7 +66,7 @@ export default function Pricing() {
       {/* Pricing Card */}
       <section className="py-24 md:py-32">
         <div className="container">
-          <div className="max-w-lg mx-auto">
+          <div className="max-w-2xl mx-auto">
             <div className="relative rounded-2xl bg-gradient-card border border-border p-8 md:p-10">
               <div className="absolute inset-0 rounded-2xl bg-primary/5" />
               <div className="relative">
@@ -67,18 +74,47 @@ export default function Pricing() {
                   <p className="text-sm text-primary font-medium mb-2">
                     Instance OpenClaw
                   </p>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl md:text-6xl font-bold text-foreground">
-                      10 €
-                    </span>
-                    <span className="text-muted-foreground">/mois</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    par instance
+                  <p className="text-lg text-muted-foreground">
+                    Tarif dégressif selon le volume
                   </p>
                 </div>
 
+                {/* Pricing Tiers */}
+                <div className="grid gap-4 mb-8">
+                  {tiers.map((tier, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center justify-between p-4 rounded-lg bg-background/50 border border-border"
+                    >
+                      <span className="text-sm font-medium text-foreground">
+                        {tier.range}
+                      </span>
+                      {tier.price ? (
+                        <div className="flex items-baseline gap-1">
+                          <span className="text-2xl font-bold text-primary">
+                            {tier.price}
+                          </span>
+                          <span className="text-sm text-muted-foreground">
+                            {tier.unit}
+                          </span>
+                        </div>
+                      ) : (
+                        <span className="text-sm font-medium text-primary">
+                          {tier.label}
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                <p className="text-xs text-muted-foreground text-center mb-6">
+                  Tous les prix sont indiqués HT (Hors Taxes)
+                </p>
+
                 <div className="space-y-4 mb-8">
+                  <p className="text-sm font-medium text-foreground">
+                    Chaque instance inclut :
+                  </p>
                   {included.map((item) => (
                     <div key={item} className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
