@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { FeatureCard } from "@/components/ui/feature-card";
-import { Server, Shield, Key, ArrowRight, Zap, MessageSquare, Bot } from "lucide-react";
+import { Server, Shield, Key, ArrowRight, Zap, MessageSquare, Bot, Send, Hash, Phone, MessageCircle, Smartphone, Users } from "lucide-react";
 import { WaitlistModal } from "@/components/WaitlistModal";
 
 const features = [
@@ -85,19 +85,26 @@ export default function Index() {
                 Connectez vos canaux préférés
               </h2>
               <p className="text-muted-foreground mb-8">
-                Telegram, Slack, WhatsApp — vos clients interagissent avec leur
+                Telegram, Slack, WhatsApp, Signal, iMessage, Teams — vos clients interagissent avec leur
                 IA sur la plateforme de leur choix. L'IA est déjà configurée
                 pour appeler votre API avec les bons identifiants.
               </p>
-              <div className="flex flex-wrap gap-4">
-                {["Telegram", "Slack", "WhatsApp"].map((channel) => (
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { name: "Telegram", icon: Send, color: "#0088cc" },
+                  { name: "Slack", icon: Hash, color: "#4A154B" },
+                  { name: "WhatsApp", icon: Phone, color: "#25D366" },
+                  { name: "Signal", icon: MessageCircle, color: "#3A76F0" },
+                  { name: "iMessage", icon: Smartphone, color: "#34C759" },
+                  { name: "Teams", icon: Users, color: "#6264A7" },
+                ].map((channel) => (
                   <div
-                    key={channel}
+                    key={channel.name}
                     className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary border border-border"
                   >
-                    <MessageSquare className="h-4 w-4 text-primary" />
+                    <channel.icon className="h-4 w-4" style={{ color: channel.color }} />
                     <span className="text-sm font-medium text-foreground">
-                      {channel}
+                      {channel.name}
                     </span>
                   </div>
                 ))}
