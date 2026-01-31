@@ -47,8 +47,8 @@ export default function Index() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              Déployez une IA dédiée pour chacun de vos clients,{" "}
-              <span className="text-gradient">connectée à vos API</span>
+              Déployez une IA dédiée à chacun de vos clients,{" "}
+              <span className="text-gradient">connectée à vos API.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
