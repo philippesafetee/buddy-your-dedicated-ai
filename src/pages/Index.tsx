@@ -123,39 +123,6 @@ export default function Index() {
                     </div>
                     <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
                       <p className="text-sm text-foreground">
-                        Bonjour ! Je suis votre assistant IA dédié. Comment puis-je vous aider aujourd'hui ?
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 justify-end">
-                    <div className="bg-primary/10 rounded-lg rounded-tr-none p-3">
-                      <p className="text-sm text-foreground">
-                        Peux-tu vérifier le statut de ma dernière commande ?
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                      <Bot className="h-4 w-4 text-primary" />
-                    </div>
-                    <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
-                      <p className="text-sm text-foreground">
-                        Je vérifie cela pour vous... Votre commande #4521 a été expédiée hier et arrivera demain. 📦
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Deuxième exemple */}
-              <div className="relative rounded-2xl bg-gradient-card border border-border p-6 md:p-8">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                      <Bot className="h-4 w-4 text-primary" />
-                    </div>
-                    <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
-                      <p className="text-sm text-foreground">
                         📩 Vous avez reçu un email de <span className="font-medium">Dupont Industries</span> avec une demande de commande. Comment souhaitez-vous que je procède ?
                       </p>
                     </div>
@@ -174,6 +141,39 @@ export default function Index() {
                     <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
                       <p className="text-sm text-foreground">
                         ✅ Commande de 1 200 € HT créée pour Dupont Industries. Validez-la ici : <span className="text-primary underline">myb2b.io/orders/1234</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Deuxième exemple */}
+              <div className="relative rounded-2xl bg-gradient-card border border-border p-6 md:p-8">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                      <Bot className="h-4 w-4 text-primary" />
+                    </div>
+                    <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
+                      <p className="text-sm text-foreground">
+                        Bonjour ! Je suis votre assistant IA dédié. Comment puis-je vous aider aujourd'hui ?
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg rounded-tr-none p-3">
+                      <p className="text-sm text-foreground">
+                        Peux-tu vérifier le statut de ma dernière commande ?
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                      <Bot className="h-4 w-4 text-primary" />
+                    </div>
+                    <div className="bg-secondary/50 rounded-lg rounded-tl-none p-3">
+                      <p className="text-sm text-foreground">
+                        Je vérifie cela pour vous... Votre commande #4521 a été expédiée hier et arrivera demain. 📦
                       </p>
                     </div>
                   </div>
